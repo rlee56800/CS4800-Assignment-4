@@ -1,7 +1,7 @@
 package Number5;
 import java.util.Random;
 
-public class IndividualHolder extends AccountHolder {
+public class IndividualHolder extends AccountHolder implements Util{
     private String name;
     private String SSN;
 
@@ -9,11 +9,6 @@ public class IndividualHolder extends AccountHolder {
         super(ID, address);
         this.name = name;
         this.SSN = SSN;
-    }
-
-    public int getNextID() {
-        Random rand = new Random();
-        return rand.nextInt(1000000);
     }
 
     public String getName() {
@@ -30,5 +25,10 @@ public class IndividualHolder extends AccountHolder {
 
     public void setSSN(String SSN) {
         this.SSN = SSN;
+    }
+
+    @Override
+    public String convertNameUpperCase(String name) {
+        return name.toUpperCase();
     }
 }

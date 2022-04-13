@@ -1,4 +1,6 @@
 package Number5;
+import java.util.Random;
+
 public abstract class AccountHolder
 {
     protected int ID;
@@ -9,6 +11,8 @@ public abstract class AccountHolder
         this.address = address;
     }
 
-    public abstract int getNextID();
-    // underlined??
+    public static int getNextID() {
+        Random rand = new Random();
+        return rand.nextInt(1000000);
+    }
 }
