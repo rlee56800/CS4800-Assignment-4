@@ -1,5 +1,4 @@
 package Number5;
-import java.util.Random;
 
 public class IndividualHolder extends AccountHolder implements Util{
     private String name;
